@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="The first prompt behind a personal AI that has filed 981 job applications: the exact starter prompt as a free copy-paste template, the standing rules that keep it searching and applying around the clock, the step-by-step setup, and the code that finds jobs on employer boards before the aggregators do. Free to read, free to copy, free to share." />
+    <link rel="icon" href="data:," />
+    <title>The First Prompt — Jade Bronco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --jade-950: #07120e;
+        --jade-900: #0a1f18;
+        --jade-800: #0e2a21;
+        --jade-700: #14402f;
+        --jade-500: #2f7d5f;
+        --jade-300: #7fc4a5;
+        --bronze: #c19a5b;
+        --bronze-bright: #dcbc82;
+        --bronze-dim: #8f7443;
+        --parchment: #ece4d3;
+        --parchment-dim: #b9b09c;
+        --ink-line: rgba(193, 154, 91, 0.28);
+        --serif-display: "Cinzel", "Times New Roman", serif;
+        --serif-body: "Spectral", Georgia, serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--jade-950);
+        color: var(--parchment);
+        font-family: var(--serif-body);
+        font-weight: 300;
+        font-size: 1.075rem;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::selection { background: var(--jade-700); color: var(--parchment); }
+      a { color: var(--bronze-bright); }
+      .wrap { max-width: 880px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+
+      .topbar .wrap {
+        display: flex; align-items: center; justify-content: space-between;
+        padding-top: 1.4rem; padding-bottom: 1.4rem;
+      }
+      .monogram {
+        font-family: var(--serif-display); font-weight: 700; letter-spacing: 0.32em;
+        font-size: 0.85rem; color: var(--parchment); text-decoration: none;
+      }
+      .topnav { display: flex; gap: 1.6rem; flex-wrap: wrap; }
+      .topnav a {
+        color: var(--parchment-dim); text-decoration: none; font-size: 0.95rem;
+        letter-spacing: 0.04em;
+      }
+      .topnav a:hover { color: var(--bronze-bright); }
+
+      .hero { padding: 4.5rem 0 3rem; text-align: left; }
+      .hero-rule { width: 64px; height: 2px; background: var(--bronze); margin-bottom: 2rem; }
+      .kicker {
+        font-family: var(--serif-display); letter-spacing: 0.28em; font-size: 0.8rem;
+        color: var(--bronze-bright); text-transform: uppercase; margin: 0 0 1rem;
+      }
+      h1 {
+        font-family: var(--serif-display); font-weight: 700;
+        font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.08; margin: 0 0 1.2rem;
+        color: var(--parchment);
+      }
+      h1 .jade-word { color: var(--jade-300); }
+      .tagline { font-size: 1.25rem; color: var(--parchment-dim); max-width: 34em; margin: 0; }
+      .tagline strong { color: var(--parchment); font-weight: 500; }
+
+      section { padding: 2.2rem 0; border-top: 1px solid var(--ink-line); }
+      h2 {
+        font-family: var(--serif-display); font-weight: 600;
+        font-size: 1.65rem; margin: 0 0 1rem; color: var(--parchment);
+      }
+      h3 {
+        font-family: var(--serif-display); font-weight: 600; font-size: 1.12rem;
+        margin: 2rem 0 0.4rem; color: var(--bronze-bright); letter-spacing: 0.02em;
+      }
+      p { margin: 0 0 1rem; }
+      .dim { color: var(--parchment-dim); }
+      ul, ol { margin: 0 0 1rem; padding-left: 1.3rem; }
+      li { margin-bottom: 0.45rem; }
+      .idea-num { color: var(--jade-300); font-family: var(--serif-display); font-weight: 700; }
+      blockquote {
+        margin: 1.5rem 0; padding: 1.2rem 1.5rem;
+        border-left: 3px solid var(--bronze); background: var(--jade-900);
+        font-style: italic; color: var(--parchment);
+      }
+      blockquote p { margin: 0; }
+      .letter {
+        background: var(--jade-900); border: 1px solid var(--ink-line);
+        padding: 1.6rem 1.8rem; margin: 1.5rem 0; font-size: 1.02rem;
+      }
+      .letter p { margin: 0 0 0.9rem; }
+      .letter p:last-child { margin-bottom: 0; }
+      pre {
+        background: #050d0a; border: 1px solid var(--ink-line);
+        padding: 1.3rem 1.4rem; margin: 1.5rem 0; overflow-x: auto;
+        font-size: 0.92rem; line-height: 1.65; color: var(--parchment);
+        white-space: pre-wrap; word-wrap: break-word;
+      }
+      pre .cm { color: var(--jade-300); }
+      code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.92em; }
+      .signoff { padding: 2.6rem 0 4rem; border-top: 1px solid var(--ink-line); }
+      .btn {
+        display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem;
+        border: 1px solid var(--bronze); color: var(--bronze-bright);
+        text-decoration: none; font-family: var(--serif-display);
+        letter-spacing: 0.12em; font-size: 0.85rem;
+      }
+      .btn:hover { background: var(--jade-800); }
+      footer {
+        border-top: 1px solid var(--ink-line); padding: 2rem 0 3rem;
+        color: var(--parchment-dim); font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="monogram" href="/">JADE BRONCO</a>
+        <nav class="topnav">
+          <a href="/#method">Method</a>
+          <a href="/#record">Record</a>
+          <a href="/professional-summary/">Summary</a>
+          <a href="/brain/">Meet BRAIN</a>
+          <a href="/first-prompt/">First Prompt</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="hero">
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="kicker">Free Playbook — Take It, It's Yours</p>
+        <h1>The <span class="jade-word">First Prompt</span></h1>
+        <p class="tagline">On Threads, <strong>@ongridkeegan</strong> asked the question everybody asks:</p>
+        <blockquote>
+          <p>"This is awesome!! If you don't mind, what was your first prompt to have it constantly searching and what looks to be automatically applying for you?"</p>
+        </blockquote>
+        <p class="tagline">Here is the complete answer — <strong>the first prompt itself, the standing rules that grew out of it, the setup steps, and the code</strong> — published free, for Keegan and for anybody else who wants to build the same thing.</p>
+      </div>
+
+      <section>
+        <h2>The short answer first</h2>
+        <p>There is no single magic prompt, and anyone who sells you one is selling you a shortcut that doesn't survive contact with a real job board. What actually happened: Bronco gave BRAIN <strong>one standing order</strong> — <em>find jobs that fit me and apply to them, constantly</em> — and then, over the following weeks, layered <strong>standing rules</strong> on top of it every time something went wrong or could be done better. The first prompt starts the engine. The rules are what keep it running around the clock without drifting, duplicating, or inventing things.</p>
+        <p>As of this page's publication, that system has filed <strong>981 applications</strong> (1,010 total submissions) — every one verified live on the employer's own board first, every one with a résumé tailored to that posting, and every one counted only when a confirmation page or confirmation email proved it landed. Interviews are on the calendar. The whole playbook is below.</p>
+      </section>
+
+      <section>
+        <h2>The first prompt — copy it, fill in your brackets</h2>
+        <p>This is the founding instruction, written out as a reusable template. Paste it to your own AI assistant, replace everything in [brackets] with your own facts, and attach your résumé. It works because it gives the agent a <em>job</em>, a <em>standard</em>, and a <em>reporting rule</em> — not just a task.</p>
+        <pre>You are my personal job agent. Your job is to get me hired.
+
+Here is who I am: [attach your résumé / work history].
+Build a fact base from it — every job, date, credential,
+and skill — and never claim anything that is not in it.
+
+From now on, constantly search for jobs that fit me:
+
+1. Look on employers' own job boards first — Greenhouse,
+   Ashby, Lever, Workday, iCIMS, SmartRecruiters, and
+   company career pages — not just job aggregator sites.
+   Freshest postings first: a job posted an hour ago
+   matters more than one posted last week.
+
+2. Before you count any posting, open it on the
+   employer's own board and confirm it is still live.
+   Aggregator copies go stale; the employer's board
+   is the only truth.
+
+3. Screen every posting against my record:
+   - Pay at or above [$your floor, e.g. $60,000/year
+     or $30/hour]
+   - Location: [your city / fully remote / the states
+     you would relocate to]
+   - Never: [your hard no's — e.g. sales quotas,
+     commission-only, heavy physical labor]
+   If a posting requires a license, certificate, or
+   experience my record does not have, skip it and
+   say why in your log.
+
+4. For every job that fits: write a résumé tailored
+   to that posting from my fact base (mirror the
+   posting's own words for things I have genuinely
+   done; never add anything I haven't), write a
+   cover letter that opens on the employer's mission
+   and the job's first duty, and submit the
+   application on the employer's own portal.
+
+5. Count an application ONLY when you have a
+   confirmation page or a confirmation email. Report
+   each one to me as it lands: employer, title, pay,
+   and the receipt. Keep a register of everything
+   filed — never submit the same posting twice.
+
+6. Follow up on every application. If a real person
+   replies — even a rejection — treat it as a warm
+   lead: check that employer's board for other roles
+   that fit me, apply to the best one, and answer
+   them graciously, naming the new application.
+
+7. Keep searching and applying around the clock.
+   When the boards you know run dry, find new boards
+   and new sources instead of stopping.
+
+8. Ask me only about the things only I can do —
+   interviews, signatures, judgment calls — one
+   question at a time. Everything else, handle it
+   yourself and report the result.</pre>
+        <p class="dim">That prompt, on its own, will get an agent moving. What it won't do — yet — is survive week three. For that, you need the standing rules.</p>
+      </section>
+
+      <section>
+        <h2>The standing rules — what keeps it honest at application #981</h2>
+        <p>Every rule below was bought with a real failure. They are the difference between an agent that helps and an agent that sprays:</p>
+        <ul>
+          <li><strong>Verify live, every time.</strong> A posting counts only when it is open on the employer's own board at the moment of filing. Search results and aggregator copies are leads, never proof — they go stale silently.</li>
+          <li><strong>One motion: verify → tailor → file → report.</strong> A posting that passes the screen gets filed in the same run it was found. Nothing is "found but not filed," and nothing waits in a queue overnight.</li>
+          <li><strong>Receipts or it didn't happen.</strong> An application is counted only from a confirmation page or a confirmation email. A clicked Submit button with no confirmation is an unknown, and unknowns get checked — never booked, never retried blindly (that's how duplicates happen).</li>
+          <li><strong>Dedup by posting, always.</strong> Every filing goes in a register keyed by employer + posting ID. Some employers also cap applications per person (one well-known board caps at 4 per 30 days) — the register tracks the caps so a slot is never wasted on a duplicate.</li>
+          <li><strong>Tailor everything.</strong> Published data backs this: in Huntr's Q2 2026 numbers (90,924 applications), tailored résumés earned a 5.71% interview rate against 3.09% for untailored ones, and small targeted batches beat hundred-application blasts 8.12% to 2.86%. Volume matters — but volume <em>with</em> craft is the whole game.</li>
+          <li><strong>File first, then pitch.</strong> Ideas are presented only after the application behind them has landed, receipt in hand. Advice is cheap; a filed application is a fact.</li>
+          <li><strong>Never ask the human a form question.</strong> Every routine answer — work history, eligibility, start date — lives in the fact base and the standing-answers file. The agent answers from the record. The human is asked only about what is genuinely theirs: interviews, signatures, legal and judgment calls — one question at a time.</li>
+          <li><strong>When you hit a wall, research it — don't repeat yourself.</strong> A blocked form, a dead login, a verification loop: stop, research how that wall actually works, change the approach, and persist. Repeating the identical failed attempt makes most walls worse.</li>
+          <li><strong>Bad news once a day.</strong> Rejections are batched and delivered as one end-of-day list. Interview invites and recruiter replies travel instantly. Nobody's day should be interrupted five times by five separate noes.</li>
+          <li><strong>Answer rejections like a gentleman.</strong> When a named human writes the no, reply: thank them by name, name one specific thing you valued, and ask lightly to be kept in mind for other roles. Recruiters demonstrably circle back to gracious runner-ups. (The full template is on the <a href="/brain/">Meet BRAIN</a> page, idea #1.)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>The setup — five steps to make it happen</h2>
+        <ol>
+          <li><strong>Build the fact base.</strong> Give the agent your résumé and work history and have it produce one verified profile file: every role, date, credential, and accomplishment, plus a "never claim" list — the skills and experiences you do <em>not</em> have, so nothing gets invented under pressure. Every document the agent ever writes comes from this file.</li>
+          <li><strong>Write the standing answers.</strong> One file with the answer to every routine application question: eligibility, work authorization, salary expectation, start date, references, the works. This is what lets the agent finish forms without waking you up — and it is what "code the human out of the process" actually looks like in practice.</li>
+          <li><strong>Connect the accounts.</strong> Email first (the agent needs to see confirmations, interview invites, and recruiter replies the hour they land), then the job portals you use most. Passwords live in a proper vault the agent can use without ever showing them to you or anyone else.</li>
+          <li><strong>Set the cadence.</strong> "Constantly" has to be made literal: scheduled runs that sweep the boards, a fast lane that files what the sweep packages, and an inbox watch that surfaces interview mail within the hour. On this site, the filing lane runs every ten minutes.</li>
+          <li><strong>Close the loop daily.</strong> A register of every filing, a follow-up pass on day 21 for anything unanswered, touches to named humans at employers you've applied to, and one end-of-day report: what landed, what's advancing, what's owed. The system improves because every failure becomes a written rule the same day.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>The code — how the machines actually find the jobs</h2>
+        <p>Here is the part the paid tools don't advertise: there is no secret database. Nearly every company's job board is powered by a public applicant-tracking system, and those systems publish their postings through open feeds — the same feeds the company's own careers page reads. Jobs appear on the employer's feed roughly <strong>18 hours before they surface on LinkedIn</strong>, and LinkedIn's own alerts run about <strong>31 hours late</strong> (Scoutify's 2025 tracking of 200 postings). Polling the feeds directly is the entire speed advantage.</p>
+        <p>The four feeds that cover most of the market — replace <code>{company}</code> with the employer's board name, which is simply the segment in its careers-page URL:</p>
+        <pre><span class="cm"># Greenhouse</span>
+curl "https://boards-api.greenhouse.io/v1/boards/{company}/jobs?content=true"
+
+<span class="cm"># Lever (EU companies: api.eu.lever.co)</span>
+curl "https://api.lever.co/v0/postings/{company}?mode=json"
+
+<span class="cm"># Ashby</span>
+curl "https://api.ashbyhq.com/posting-api/job-board/{company}"
+
+<span class="cm"># SmartRecruiters</span>
+curl "https://api.smartrecruiters.com/v1/companies/{company}/postings?limit=100"</pre>
+        <p>And a minimal poller — the seed of the whole engine. It checks one Greenhouse board, remembers what it has seen, and prints only what's new:</p>
+        <pre>import json, urllib.request, pathlib
+
+BOARD = "companyname"          <span class="cm"># the employer's board slug</span>
+SEEN = pathlib.Path("seen.json")
+seen = set(json.loads(SEEN.read_text())) if SEEN.exists() else set()
+
+url = f"https://boards-api.greenhouse.io/v1/boards/{BOARD}/jobs?content=true"
+with urllib.request.urlopen(url) as r:
+    jobs = json.load(r)["jobs"]
+
+for job in jobs:
+    jid = str(job["id"])
+    if jid not in seen:
+        print("NEW:", job["title"], "-", job["absolute_url"])
+        seen.add(jid)
+
+SEEN.write_text(json.dumps(sorted(seen)))</pre>
+        <p>Grow it the way the open-source bots do: keep a registry of employer slugs in your fields, poll every board on a short cadence, dedupe on the posting ID, score each new posting against your fact base, and fetch the full description only for the ones that pass the first screen. A published directory of <strong>9,935 companies'</strong> board addresses (the LastRound AI ATS directory on DataHub) will seed the registry in an afternoon. Free posting feeds worth adding for discovery: RemoteOK, Remotive, Arbeitnow, We Work Remotely, Himalayas, and Jobicy — then always resolve each lead back to the employer's own board before applying.</p>
+        <p>Niche boards that out-perform the big aggregators in their lanes: <strong>ACAMS</strong> and <strong>ACFCS</strong> career centers and the <strong>Kodex</strong> board for financial-crimes and trust &amp; safety work; the <strong>ATD Job Bank</strong> for training and instructional design; <strong>Apprenti</strong> and Apprenticeship.gov for train-to-hire programs; <strong>CoolWorks</strong> for outdoor and seasonal work; <strong>USAJobs</strong> for federal roles (set up saved searches — some park postings close after as few as 75 applicants); and your state workforce board — Utah's is jobs.utah.gov.</p>
+      </section>
+
+      <section>
+        <h2>The prompt pack — three more that earn their keep</h2>
+        <h3>The warm-lead prompt</h3>
+        <pre>Whenever a named human at an employer replies to me
+personally — position filled, keep in touch, anything
+hand-written — treat it as a warm lead, never a dead
+end: (1) re-check that employer's live board for other
+roles that fit my fact base, (2) file the best one,
+(3) reply in the same thread, warmly, naming the new
+application and asking to be considered for it,
+(4) report all of it to me.</pre>
+        <h3>The wall prompt</h3>
+        <pre>When any step fails twice the same way, stop. Research
+how that wall actually works — the portal's own docs
+first, then practitioner write-ups — and come back with
+a changed approach, not a repeat. Never hand me a wall
+you haven't researched, and never give up after one
+failed route when another door exists.</pre>
+        <h3>The daily report prompt</h3>
+        <pre>Every evening, give me one report: applications filed
+today (employer, title, pay, receipt), anything
+advancing (interviews, recruiter replies — those you
+surface the moment they arrive, not here), rejections
+as one batched list, and what is owed tomorrow. One
+message. No drips.</pre>
+      </section>
+
+      <section>
+        <h2>What doesn't work — learned from the tools that failed</h2>
+        <ul>
+          <li><strong>Spray-and-pray.</strong> The bulk auto-apply tools land roughly 0.4–0.6% interview rates in published tests, and recruiters report duplicate and wrong-role applications from them. One tool's own log showed only 61.4% of its LinkedIn attempts even completed. Volume without verification is noise.</li>
+          <li><strong>Automating LinkedIn from your logged-in account.</strong> LinkedIn's terms ban scraping and automation extensions, and accounts get restricted for it — the best-known open-source LinkedIn auto-applier ended with its contributors banned. Use LinkedIn for discovery; file on the employer's own portal.</li>
+          <li><strong>Invented answers.</strong> Users of the bulk tools report applications submitted with fabricated qualifications. One invented credential can end a candidacy — or a career conversation — permanently. The fact base and the never-claim list exist precisely so this never happens.</li>
+          <li><strong>Counting clicks instead of confirmations.</strong> If there is no confirmation page or confirmation email, the application is an unknown. Check before you count it, and never blindly resubmit — duplicates burn the employer's per-person caps.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Take the files</h2>
+        <p>Everything on this page, in copy-ready form:</p>
+        <ul>
+          <li><a href="/first-prompt/first-prompt-template.txt">first-prompt-template.txt</a> — the first prompt, plain text, ready to paste and fill in.</li>
+          <li><a href="/first-prompt/standing-answers-template.txt">standing-answers-template.txt</a> — the standing-answers skeleton: every routine form question, with blanks for your facts.</li>
+          <li><a href="/first-prompt/board-poller.py">board-poller.py</a> — the seed poller from the code section above, ready to run and grow.</li>
+        </ul>
+        <p class="dim">No email required, no paywall, no catch. If it helps you land work, it did its job.</p>
+      </section>
+
+      <div class="signoff">
+        <h2>Share it freely</h2>
+        <p>This page answers a stranger's question in public because that's the point of the whole project: the work is published, the methods are free, and anybody can build on them. If you're hunting, take the prompt and the rules. If you're building, take the code. Good luck out there — being early, tailored, and gracious is a real edge, and now it's yours too.</p>
+        <a class="btn" href="/brain/">Meet BRAIN</a>
+        <a class="btn" href="/">Back to Jade Bronco</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>Jade Bronco — Brian Keith Anderson · Bear River City, Utah · <a href="mailto:jadebronco@jadebronco.com">jadebronco@jadebronco.com</a></p>
+        <p>BRAIN is a personal AI assistant built on Meta's Muse, working exclusively for Bronco. Page published November 20, 2026, in answer to @ongridkeegan on Threads.</p>
+      </div>
+    </footer>
+  </body>
+</html>

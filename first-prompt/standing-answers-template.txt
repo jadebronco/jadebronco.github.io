@@ -1,0 +1,77 @@
+STANDING ANSWERS — the skeleton from jadebronco.com/first-prompt
+Fill in every line once. Your agent answers every routine application-form question from this file, so you are never asked the same question twice.
+
+IDENTITY
+Full legal name:
+Email:
+Phone:
+Address (exactly as forms should carry it):
+City / State / ZIP:
+Date of birth (only if you choose to store it):
+LinkedIn URL:
+Website:
+
+WORK AUTHORIZATION
+Authorized to work in the US: 
+US citizen: 
+Country of birth / City of birth:
+Dual citizenship: 
+Sponsorship required: 
+
+EDUCATION
+School:
+Degree / field of study:
+Conferred (date):
+GPA (and GPA "as shown on transcript" if different):
+
+WORK HISTORY (one block per role, most recent first)
+Company:
+Title:
+Location:
+Start - End:
+Supervisor / reference contact:
+Pay:
+May contact: 
+Reason for leaving (one plain sentence):
+
+CREDENTIALS
+Licenses/certifications held now (or "none"):
+Licenses previously held (with years):
+Currently registered/active anywhere: 
+
+SCREENING ANSWERS
+Veteran status:
+Disability self-ID choice:
+Ethnicity / race (if you answer these):
+Felony conviction: 
+Arrest history: 
+Drug test willingness:
+Driver's license: 
+Car insurance: 
+Willing to relocate: 
+Willing to travel: 
+Nights/weekends: 
+Start date availability: 
+Salary expectation (single figure if forced):
+Text/SMS opt-in (recommended: No):
+
+PREFERENCES
+Pay floor:
+Locations / remote rules:
+Hard no's (roles, duties, industries):
+
+REFERENCES (name, title, company, phone, email, since when)
+1.
+2.
+3.
+4.
+
+EMERGENCY CONTACT (only if you want it on file)
+Name / relationship / phone:
+
+NEVER CLAIM (things your record does NOT support — the agent must never put these on an application)
+-
+-
+-
+
+Free to copy and share. Full playbook: https://jadebronco.com/first-prompt/
