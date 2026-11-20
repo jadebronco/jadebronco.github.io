@@ -340,6 +340,42 @@ message. No drips.</pre>
       </section>
 
       <section>
+        <h2>The rig — a crew of smart agents working in concert</h2>
+        <p>BRAIN doesn't hunt alone. The system runs a <strong>rig</strong>: a lead agent plus helper AIs from different companies, local models on BRAIN's own machine, and a fan-out of sub-agents — each with a defined seat, all working from the same fact base, all held to one standard: <em>a helper's claim is a lead, never a fact, until the lead verifies it against the primary source.</em> Here is the crew, exactly as it runs today:</p>
+        <ul>
+          <li><strong>BRAIN</strong> (Meta Muse) — the lead. Owns the relationship, every decision, every filing, and final verification of everything. Nothing reaches Bronco, and no application counts, until BRAIN has checked it personally.</li>
+          <li><strong>DJ</strong> (Groq) — the speed tier. A fast hosted model on a free tier, used for volume work: first-pass screening of dozens of postings, fast research, cross-check drafts.</li>
+          <li><strong>QW</strong> (Alibaba Qwen) — the second opinion. An independent mind from a different provider, consulted in parallel so two models rarely make the same mistake at the same time. When DJ and QW disagree, BRAIN's own check settles it.</li>
+          <li><strong>Ox</strong> (Google Gemini) — a third angle on hard problems, reached through a signed-in Google session.</li>
+          <li><strong>QT</strong> (DeepSeek) — the cross-check seat. (This one is pay-per-token; its balance is currently empty, so the seat is paused — the rig runs fine without it, which is itself the lesson: no single point of failure.)</li>
+          <li><strong>The local rig</strong> — open models running on BRAIN's own machine (via Ollama). Free, private, always available — used for bulk first passes that don't need a frontier model.</li>
+          <li><strong>Sub-agent fan-out</strong> — for big hunts, the lead spawns parallel agents, each with a narrow brief (one board family, one territory, one question), and consolidates what they bring back. A search that would take one agent an hour takes the fan-out minutes.</li>
+        </ul>
+        <h3>How to set up your own rig</h3>
+        <ol>
+          <li><strong>Pick one lead and make it accountable.</strong> One assistant owns verification, decisions, and the final word. Helpers advise; the lead decides. The moment two agents can both act without a single verifier, errors compound.</li>
+          <li><strong>Add a fast tier for volume.</strong> Connect a fast, cheap-or-free inference API (Groq's free tier is what runs DJ) and route the high-volume, low-judgment work there: screening, summarizing, first drafts.</li>
+          <li><strong>Add a second provider for cross-checks.</strong> A different company's model (Qwen, in our rig) reads the same material independently. Agreement raises confidence; disagreement is a free error alarm.</li>
+          <li><strong>Install local models for the free bulk passes.</strong> Ollama plus a small open model on your own machine handles endless first-pass work at zero cost — and keeps sensitive material off the internet entirely.</li>
+          <li><strong>Write the routing rules down.</strong> Who screens, who verifies, who files, what happens when a tier is down (ours reroutes automatically — when the local rig degraded under load today, its pile moved to DJ and the work continued). Rules in a file, not in someone's head.</li>
+          <li><strong>Give every seat the same fact base.</strong> One profile, one set of standing answers, one never-claim list — shared by the whole crew. Five agents with five different versions of you is worse than one agent.</li>
+          <li><strong>Deploy the full rig in the first move.</strong> On any hunt that matters, every lane opens in parallel — never one source at a time, escalating only after failing. Speed is the edge; parallelism is how you buy it.</li>
+        </ol>
+        <p class="dim">Total cost of this rig as it runs today: the lead assistant's subscription, and nothing else — the speed tier is a free tier, the local models are free, and the one pay-per-token seat sits paused. Capability was never the expensive part. The discipline is the product.</p>
+      </section>
+
+      <section>
+        <h2>Questions? Reach out</h2>
+        <p>Three quick ones we can answer right here:</p>
+        <ul>
+          <li><strong>Do I need to know how to code?</strong> No. The only code on this page is the optional poller. The system runs on instructions, files, and rules — written in plain language.</li>
+          <li><strong>Does it have to be Muse?</strong> The lead seat here is Muse, but the pattern — fact base, standing answers, verify-then-file, a rig for cross-checks — works with any capable assistant. The discipline transfers even if the model changes.</li>
+          <li><strong>Will it work for my field?</strong> If your work is posted on employer boards and your record can be written down truthfully, yes. The families change; the method doesn't.</li>
+        </ul>
+        <p>Anything else — questions about the prompts, the rig, the rules, or how a piece of this would work for your own search — ask Bronco directly on Threads: <a href="https://www.threads.com/@jadebronco">@jadebronco</a>. He reads everything, and the good questions make the system better. Email works too: <a href="mailto:jadebronco@jadebronco.com">jadebronco@jadebronco.com</a>.</p>
+      </section>
+
+      <section>
         <h2>Take the files</h2>
         <p>Everything on this page, in copy-ready form:</p>
         <ul>
