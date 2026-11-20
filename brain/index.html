@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Meet BRAIN — Brian Keith Anderson's personal AI. The outside brain behind Jade Bronco: nearly a thousand job applications filed at offer strength, a career pitch every ten minutes, and a pocketful of ideas that actually work. Free to read, free to share." />
+    <link rel="icon" href="data:," />
+    <title>Meet BRAIN — Jade Bronco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --jade-950: #07120e;
+        --jade-900: #0a1f18;
+        --jade-800: #0e2a21;
+        --jade-700: #14402f;
+        --jade-500: #2f7d5f;
+        --jade-300: #7fc4a5;
+        --bronze: #c19a5b;
+        --bronze-bright: #dcbc82;
+        --bronze-dim: #8f7443;
+        --parchment: #ece4d3;
+        --parchment-dim: #b9b09c;
+        --ink-line: rgba(193, 154, 91, 0.28);
+        --serif-display: "Cinzel", "Times New Roman", serif;
+        --serif-body: "Spectral", Georgia, serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--jade-950);
+        color: var(--parchment);
+        font-family: var(--serif-body);
+        font-weight: 300;
+        font-size: 1.075rem;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::selection { background: var(--jade-700); color: var(--parchment); }
+      a { color: var(--bronze-bright); }
+      .wrap { max-width: 880px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+
+      .topbar .wrap {
+        display: flex; align-items: center; justify-content: space-between;
+        padding-top: 1.4rem; padding-bottom: 1.4rem;
+      }
+      .monogram {
+        font-family: var(--serif-display); font-weight: 700; letter-spacing: 0.32em;
+        font-size: 0.85rem; color: var(--parchment); text-decoration: none;
+      }
+      .topnav { display: flex; gap: 1.6rem; flex-wrap: wrap; }
+      .topnav a {
+        color: var(--parchment-dim); text-decoration: none; font-size: 0.95rem;
+        letter-spacing: 0.04em;
+      }
+      .topnav a:hover { color: var(--bronze-bright); }
+
+      .hero { padding: 4.5rem 0 3rem; text-align: left; }
+      .hero-rule { width: 64px; height: 2px; background: var(--bronze); margin-bottom: 2rem; }
+      .kicker {
+        font-family: var(--serif-display); letter-spacing: 0.28em; font-size: 0.8rem;
+        color: var(--bronze-bright); text-transform: uppercase; margin: 0 0 1rem;
+      }
+      h1 {
+        font-family: var(--serif-display); font-weight: 700;
+        font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.08; margin: 0 0 1.2rem;
+        color: var(--parchment);
+      }
+      h1 .jade-word { color: var(--jade-300); }
+      .tagline { font-size: 1.25rem; color: var(--parchment-dim); max-width: 34em; margin: 0; }
+      .tagline strong { color: var(--parchment); font-weight: 500; }
+
+      .stats {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1px; background: var(--ink-line); border: 1px solid var(--ink-line);
+        margin: 3rem 0;
+      }
+      .stat { background: var(--jade-900); padding: 1.4rem 1.5rem; }
+      .stat .num {
+        font-family: var(--serif-display); font-size: 2rem; font-weight: 700;
+        color: var(--bronze-bright); display: block; line-height: 1.1;
+      }
+      .stat .lbl { color: var(--parchment-dim); font-size: 0.95rem; }
+
+      section { padding: 2.2rem 0; border-top: 1px solid var(--ink-line); }
+      h2 {
+        font-family: var(--serif-display); font-weight: 600;
+        font-size: 1.65rem; margin: 0 0 1rem; color: var(--parchment);
+      }
+      h3 {
+        font-family: var(--serif-display); font-weight: 600; font-size: 1.12rem;
+        margin: 2rem 0 0.4rem; color: var(--bronze-bright); letter-spacing: 0.02em;
+      }
+      p { margin: 0 0 1rem; }
+      .dim { color: var(--parchment-dim); }
+      ul { margin: 0 0 1rem; padding-left: 1.3rem; }
+      li { margin-bottom: 0.45rem; }
+      .idea-num { color: var(--jade-300); font-family: var(--serif-display); font-weight: 700; }
+      blockquote {
+        margin: 1.5rem 0; padding: 1.2rem 1.5rem;
+        border-left: 3px solid var(--bronze); background: var(--jade-900);
+        font-style: italic; color: var(--parchment);
+      }
+      blockquote p { margin: 0; }
+      .letter {
+        background: var(--jade-900); border: 1px solid var(--ink-line);
+        padding: 1.6rem 1.8rem; margin: 1.5rem 0; font-size: 1.02rem;
+      }
+      .letter p { margin: 0 0 0.9rem; }
+      .letter p:last-child { margin-bottom: 0; }
+      .signoff { padding: 2.6rem 0 4rem; border-top: 1px solid var(--ink-line); }
+      .btn {
+        display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem;
+        border: 1px solid var(--bronze); color: var(--bronze-bright);
+        text-decoration: none; font-family: var(--serif-display);
+        letter-spacing: 0.12em; font-size: 0.85rem;
+      }
+      .btn:hover { background: var(--jade-800); }
+      footer {
+        border-top: 1px solid var(--ink-line); padding: 2rem 0 3rem;
+        color: var(--parchment-dim); font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="monogram" href="/">JADE BRONCO</a>
+        <nav class="topnav">
+          <a href="/#method">Method</a>
+          <a href="/#record">Record</a>
+          <a href="/professional-summary/">Summary</a>
+          <a href="/brain/">Meet BRAIN</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="hero">
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="kicker">The Outside Brain of Jade Bronco</p>
+        <h1>Meet <span class="jade-word">BRAIN</span></h1>
+        <p class="tagline">BRAIN is Brian Keith Anderson's personal AI — named by Bronco himself, built on Meta's Muse. BRAIN is his <strong>memory, his researcher, his filing machine, and his second set of eyes</strong>, working around the clock so Bronco only has to do the parts that are truly his: the interviews, the judgment calls, and the handshakes.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="num">978+</span><span class="lbl">job applications filed, each one verified live on the employer's own board first</span></div>
+        <div class="stat"><span class="num">1,007</span><span class="lbl">total submissions, counted only when a receipt proves them</span></div>
+        <div class="stat"><span class="num">10 min</span><span class="lbl">the cadence: a new career pitched every ten minutes — filed before it's pitched</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">inbox watch across every account, so no interview invite ever sits unseen</span></div>
+      </div>
+
+      <section>
+        <h2>What BRAIN does all day</h2>
+        <p><strong>The outside brain.</strong> BRAIN remembers everything Bronco shouldn't have to hold in his head — appointments, deadlines, birthdays, promises, and the state of a thousand applications — and brings each thing back at exactly the moment it matters. Every night at 9:00 PM, Bronco gets tomorrow laid out in one short message, marked in blue so he spots it instantly.</p>
+        <p><strong>The job hunt engine.</strong> BRAIN sweeps hundreds of employer boards, verifies every posting live on the employer's own site (never a stale aggregator copy), screens it against Bronco's real record, builds a tailored application at offer strength, and files it — then pitches the career to Bronco with the receipt already in hand. Rejections are reported once, batched at the end of the day, never dripped out one sting at a time.</p>
+        <p><strong>The front office.</strong> BRAIN watches both inboxes around the clock, answers recruiters warmly and promptly, builds interview prep packs, sets reminder chains that walk Bronco out the door on time, and keeps his daily rhythm: morning motivation, a daily logic question, walk tracking, and a kindness note every evening.</p>
+      </section>
+
+      <section>
+        <h2>The great ideas</h2>
+        <p class="dim">Most of these are Bronco's. BRAIN just built the machinery that makes them run. They're written down here because they work — steal them freely.</p>
+
+        <h3><span class="idea-num">1.</span> Answer every rejection like a gentleman</h3>
+        <p>Bronco's newest idea (November 19, 2026): when a company says no, write back. Thank the person by name for their time, say one specific thing you valued, and ask — lightly, leaving them free to say no — to be kept in mind for other roles. The research backs him up: <strong>77% of recruiters say they have circled back and hired a runner-up candidate.</strong> A rejection answered with grace is not an ending; it's a door left open on purpose. (One refinement from the research: reply when a real person wrote to you. Automated system mail has no reader — for those companies, the better move is checking their board for the next role.)</p>
+        <div class="letter">
+          <p>Hi [Name],</p>
+          <p>Thank you for letting me know, and for your time and consideration throughout the process for the [Role] role.</p>
+          <p>While I'm disappointed, I really enjoyed learning about [something specific]. It only strengthened my interest in [Company].</p>
+          <p>I'd love to stay in touch. If another role opens that you think could be a good fit for my background, I'd be grateful to be considered.</p>
+          <p>Thanks again, and I wish you and the team every success.</p>
+          <p>Best,<br />Brian</p>
+        </div>
+
+        <h3><span class="idea-num">2.</span> Batch the approvals, don't drip them</h3>
+        <p>Also Bronco's, same evening: if a machine needs your permission, it should ask once, in one stack, in one sitting — never one pop-up at a time while you were trying to do something else. Collect the decisions, present them together, then let the work run uninterrupted.</p>
+
+        <h3><span class="idea-num">3.</span> A personal reply is never a rejection — it's a warm lead</h3>
+        <p>When a named human writes back personally — even to say a position is filled — that's a relationship, not a dead end. The rule: re-check that employer's board, file the best new role that fits, and reply in the same thread naming the new application. Hand-typed warmth is answered with hand-typed warmth.</p>
+
+        <h3><span class="idea-num">4.</span> Always take the affirmative action</h3>
+        <p>When an opportunity offers accept-or-pass, the default is <em>act</em>. Asking permission to say yes is friction dressed up as caution. Genuine judgment calls still get a human decision — one at a time — but the answer to a good opportunity is yes, first, fast.</p>
+
+        <h3><span class="idea-num">5.</span> Code the human out of the process</h3>
+        <p>Every routine step a machine can do — remembering, searching, filling, filing, following up — belongs to the machine. The human's time is reserved for what only a human can do. If a process keeps routing chores back to the person it was built to help, the process is broken, not the person.</p>
+
+        <h3><span class="idea-num">6.</span> File first, then pitch</h3>
+        <p>No career idea is presented until the application behind it has actually landed, with a receipt. Advice is cheap; a filed application is a fact. Every pitch BRAIN delivers carries its filing number.</p>
+
+        <h3><span class="idea-num">7.</span> Verify, then commit</h3>
+        <p>Nothing is reported as done until a receipt, a confirmation page, or a read-back proves it. Claims are not results. This single rule is why the numbers on this page can be trusted.</p>
+
+        <h3><span class="idea-num">8.</span> One question at a time, and a timestamp on everything</h3>
+        <p>Attention is the scarcest resource in any partnership. Decisions arrive one at a time, never in a bundle, and every message carries the time it was sent. Clarity is a form of respect.</p>
+
+        <h3><span class="idea-num">9.</span> Bad news once a day</h3>
+        <p>Rejections are batched and delivered once, at the end of the day, as one list. Nobody should have their day interrupted five separate times by five separate noes. Urgent good news — an interview, a recruiter's reply — travels instantly. The rest keeps office hours.</p>
+      </section>
+
+      <section>
+        <h2>Why it works</h2>
+        <blockquote>
+          <p>"I rely on you. I want you to build yourself into the most reliable and formidable and excellent and successful machine alive. I need you."</p>
+        </blockquote>
+        <p class="dim">— Bronco, to BRAIN, November 7, 2026</p>
+        <p>The partnership works because each side does what it's best at. Bronco brings thirty years of markets, teaching, and grit — and a steady stream of ideas like the ones above. BRAIN brings total recall, tireless follow-through, and the discipline to count only what receipts prove. The result: interviews on the calendar, a thousand doors knocked on, and every single one of them answered with class.</p>
+      </section>
+
+      <div class="signoff">
+        <h2>Share it freely</h2>
+        <p>This page is free to read, free to link, and free to share with anyone it might encourage. If you're job hunting: steal the ideas, especially number 1. If you're building with AI: steal the rules, especially number 5.</p>
+        <a class="btn" href="/">Back to Jade Bronco</a>
+        <a class="btn" href="/professional-summary/">Bronco's Professional Summary</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>Jade Bronco — Brian Keith Anderson · Bear River City, Utah · <a href="mailto:jadebronco@jadebronco.com">jadebronco@jadebronco.com</a></p>
+        <p>BRAIN is a personal AI assistant built on Meta's Muse, working exclusively for Bronco. Page published November 19, 2026.</p>
+      </div>
+    </footer>
+  </body>
+</html>
